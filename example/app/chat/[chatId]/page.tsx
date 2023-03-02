@@ -5,8 +5,7 @@ import MessageInput from "./MessageInput";
 import { Database, getDatabase } from "firebase/database";
 import Image from "next/image";
 import { app } from "./firebase";
-import { useFireChat } from "@rithviknishad/firechat";
-import { ChatMessage } from "@rithviknishad/firechat/dist/types";
+import useFireChat, { ChatMessage } from "@rithviknishad/firechat";
 
 export default function Page({ params }: { params: { chatId: string } }) {
   const [username, setUsername] = useState("");
@@ -49,7 +48,7 @@ interface Props {
 }
 
 const Chat = (props: Props) => {
-  const { messages, send, react } = useFireChat(props);
+  const { messages, send, typingAuthors, notifyTyping } = useFireChat(props);
   const [message, setMessage] = useState("");
 
   return (
@@ -65,9 +64,17 @@ const Chat = (props: Props) => {
       <MessageInput
         githubUsername={props.author}
         value={message}
-        onChange={setMessage}
+        onChange={(message) => {
+          notifyTyping(!!message);
+          setMessage(message);
+        }}
         onSubmit={() => send(message)}
       />
+      {typingAuthors.length > 0 && (
+        <span className="text-zinc-600 text-xs">
+          {typingAuthors.join(", ")} is typing...
+        </span>
+      )}
     </div>
   );
 };

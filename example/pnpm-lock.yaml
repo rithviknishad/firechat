@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@heroicons/react': ^2.0.16
-  '@rithviknishad/firechat': ^1.1.1
+  '@rithviknishad/firechat': ^1.2.0
   '@types/node': 18.14.4
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
@@ -21,7 +21,7 @@ specifiers:
 
 dependencies:
   '@heroicons/react': 2.0.16_react@18.2.0
-  '@rithviknishad/firechat': 1.1.1_y3agcusjskxex6kv6fqfrcrkom
+  '@rithviknishad/firechat': 1.2.0_y3agcusjskxex6kv6fqfrcrkom
   '@types/node': 18.14.4
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
@@ -780,8 +780,8 @@ packages:
     resolution: {integrity: sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==}
     dev: false
 
-  /@rithviknishad/firechat/1.1.1_y3agcusjskxex6kv6fqfrcrkom:
-    resolution: {integrity: sha512-F95ojx37UBSENmiR3qRTNXvEVPVoKcTueLpBm1aMn3PbFKfNPuAA4G386z6AmYXmezMy0gzqIX85g+I2kjF0Iw==}
+  /@rithviknishad/firechat/1.2.0_y3agcusjskxex6kv6fqfrcrkom:
+    resolution: {integrity: sha512-QJa2DgS4x516ibTWrdhzWV1RvF70X+yYTWrSI3rGArg3WEjmpEmq8SaF9+BRxw+P4WKel/vE+uFGt/oTtEYAfA==}
     engines: {node: '>=8', npm: '>=5'}
     peerDependencies:
       firebase: ^9.17.1
