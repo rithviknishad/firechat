@@ -1,24 +1,28 @@
 {
-  "name": "firechat",
+  "name": "@rithviknishad/firechat",
   "version": "1.0.0",
   "description": "A simple react chat client using firebase realtime database.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rm -rf dist && tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf dist && tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "peerDependencies": {
-    "firebase": "^9.17.1",
-    "react": "18.2.0"
+    "firebase": ">= 9.17.1",
+    "react": ">= 16.8.0"
   },
   "devDependencies": {
     "@types/node": "18.14.2",
     "@types/react": "18.0.28",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
     "firebase": "^9.17.1",
     "react": "18.2.0",
+    "rollup": "^3.18.0",
+    "rollup-plugin-sass": "^1.12.18",
+    "rollup-plugin-typescript2": "^0.34.1",
     "typescript": "4.9.5"
   }
 }
