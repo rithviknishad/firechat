@@ -1,6 +1,6 @@
 {
   "name": "@rithviknishad/firechat",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Add chat functionality to your react app with firebase realtime database.",
   "author": "Rithvik Nishad <mail@rithviknishad.dev> (https://rithviknishad.dev)",
   "license": "MIT",
@@ -20,7 +20,9 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "react": "^16.9.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "firebase": "^9.17.1"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
