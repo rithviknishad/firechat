@@ -65,7 +65,7 @@ export interface ChatMessage {
   reactions: ChatReactions;
 }
 
-export default function useChat({
+export default function useFireChat({
   db,
   chatCategory = "general",
   chatId,
