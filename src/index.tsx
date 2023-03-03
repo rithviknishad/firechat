@@ -103,7 +103,7 @@ const useFireChat = ({
       const authorsLastTyping = Object.entries(data).reduce(
         (acc, [member, { typing }]: any) => {
           if (member !== author && typing) {
-            acc[author] = typing;
+            acc[member] = typing;
           }
           return acc;
         },

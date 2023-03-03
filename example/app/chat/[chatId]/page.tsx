@@ -6,6 +6,7 @@ import { Database, getDatabase } from "firebase/database";
 import Image from "next/image";
 import { app } from "./firebase";
 import useFireChat, { ChatMessage } from "@rithviknishad/firechat";
+import { EllipsisHorizontalIcon } from "@heroicons/react/24/solid";
 
 export default function Page({ params }: { params: { chatId: string } }) {
   const [username, setUsername] = useState("");
@@ -56,11 +57,23 @@ const Chat = (props: Props) => {
       <div className="font-mono text-yellow-400 tracking-wider uppercase">
         Chat #{props.chatId}
       </div>
-      <div className="flex flex-col gap-2 w-full h-full">
+      <div className="flex flex-col gap-2 w-full h-full overflow-auto my-4">
         {messages.map((message, index) => (
           <ChatMessageTile key={index} {...message} />
         ))}
       </div>
+
+      <span
+        className={`text-zinc-600 text-xs place-self-start ${
+          typingAuthors.length ? "opacity-100" : "opacity-0"
+        } transition-all duration-200 ease-in-out`}
+      >
+        <EllipsisHorizontalIcon
+          className="inline-block h-4 w-4 animate-bounce mr-2"
+          aria-hidden="true"
+        />
+        {typingAuthors.join(", ")} is typing...
+      </span>
       <MessageInput
         githubUsername={props.author}
         value={message}
@@ -70,11 +83,6 @@ const Chat = (props: Props) => {
         }}
         onSubmit={() => send(message)}
       />
-      {typingAuthors.length > 0 && (
-        <span className="text-zinc-600 text-xs">
-          {typingAuthors.join(", ")} is typing...
-        </span>
-      )}
     </div>
   );
 };
