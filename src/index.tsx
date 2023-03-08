@@ -138,11 +138,11 @@ const useFireChat = ({
      * Send a message to the chat room.
      * @param message Message to send
      */
-    send: async (message: string) => {
+    send: async (message: string, meta?: object) => {
       const timestamp = Date.now();
       await set(
         ref(db, `chats/${chatCategory}/${chatId}/messages/${timestamp}`),
-        { author, message }
+        { author, message, meta }
       );
     },
 
