@@ -24,6 +24,7 @@ export declare interface ChatMessage {
   message: string;
   timestamp: Timestamp;
   reactions: ChatMessageReactions;
+  meta?: object;
 }
 
 declare interface AuthorsLastTyping {
