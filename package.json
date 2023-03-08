@@ -1,6 +1,6 @@
 {
   "name": "@rithviknishad/firechat",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Add chat functionality to your react app with firebase realtime database.",
   "author": "Rithvik Nishad <mail@rithviknishad.dev> (https://rithviknishad.dev)",
   "license": "MIT",
