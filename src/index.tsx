@@ -143,7 +143,7 @@ const useFireChat = ({
       const timestamp = Date.now();
       await set(
         ref(db, `chats/${chatCategory}/${chatId}/messages/${timestamp}`),
-        meta ? { author, message } : { author, message, meta }
+        meta ? { author, message, meta } : { author, message }
       );
     },
 
